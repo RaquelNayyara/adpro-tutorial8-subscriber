@@ -14,3 +14,8 @@ AMQP adalah singkatan dari Advanced Message Queuing Protocol. Ini adalah protoko
 
 ### Simulation slow subscriber
 ![Simulation slow subscriber](assets/image/Simulation%20slow%20subscriber.jpg)Queued Message di broker akan meningkat karena adanya penundaan yang diterapkan, menyebabkan publisher mengirim pesan lebih cepat daripada subscriber menerimanya. Dalam situasi saya, jumlah pesan yang queued message di broker adalah 16 setelah menjalankan Publisher sebanyak 5 kali.
+
+### Reflection and Running at least three subscribers
+![Reflection and Running at least three subscribers](assets/image/Reflection%20and%20Running%20at%20least%20three.jpg)
+![Reflection and Running at least three subscribers terminal](assets/image/Reflection%20and%20Running%20at%20least%20three2.jpg)
+Pada situasi di mana publisher mengirimkan banyak data ke antrian pesan, perbedaan data yang diterima oleh setiap subscriber dapat terjadi. Ini disebabkan oleh sifat setiap subscriber yang beroperasi secara independen, sehingga mereka mengambil data dari antrian pesan secara terpisah. Setelah data diambil dari antrian pesan, pesan tersebut akan dihapus dan tidak dapat diakses oleh aplikasi lain.
