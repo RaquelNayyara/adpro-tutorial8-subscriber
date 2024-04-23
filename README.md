@@ -11,3 +11,6 @@ AMQP adalah singkatan dari Advanced Message Queuing Protocol. Ini adalah protoko
 1. `guest` pertama adalah nama pengguna yang digunakan untuk autentikasi pada server RabbitMQ, seringkali merupakan nama pengguna bawaan.
 2. `guest` kedua adalah kata sandi pengguna. Pada RabbitMQ, kata sandi standar juga seringkali adalah `guest`.
 3. `localhost:5672` adalah nama host dan nomor port yang digunakan oleh broker AMQP. `localhost` menunjukkan broker AMQP dijalankan pada mesin yang sama dengan kode, dan `5672` adalah port bawaan untuk komunikasi AMQP.
+
+### Simulation slow subscriber
+![Simulation slow subscriber](assets/image/Simulation%20slow%20subscriber.jpg)Queued Message di broker akan meningkat karena adanya penundaan yang diterapkan, menyebabkan publisher mengirim pesan lebih cepat daripada subscriber menerimanya. Dalam situasi saya, jumlah pesan yang queued message di broker adalah 16 setelah menjalankan Publisher sebanyak 5 kali.
